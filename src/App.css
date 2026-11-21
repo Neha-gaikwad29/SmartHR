@@ -1,0 +1,209 @@
+/* Main Layout */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f4f7fc;
+  font-family: Arial, sans-serif;
+}
+
+.main-content {
+  flex: 1;
+  padding: 30px;
+  overflow-x: auto;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  min-height: 100vh;
+  background-color: #ffffff;
+  padding: 25px 18px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  color: #2563eb;
+  font-size: 22px;
+  margin-bottom: 40px;
+}
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #64748b;
+  padding: 13px;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background-color: #eaf1ff;
+  color: #2563eb;
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+  color: #64748b;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 15px;
+  cursor: pointer;
+}
+
+/* Page Headings */
+.welcome,
+.page-header {
+  margin-bottom: 30px;
+}
+
+.welcome h1,
+.page-header h1 {
+  color: #1e293b;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.welcome p,
+.page-header p {
+  color: #64748b;
+}
+
+/* Dashboard Statistics */
+.stats-container,
+.leave-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+.stat-card h2 {
+  color: #2563eb;
+  font-size: 26px;
+  margin-bottom: 12px;
+}
+
+.stat-card p {
+  color: #64748b;
+}
+
+/* Dashboard Bottom Sections */
+.dashboard-bottom {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 20px;
+}
+
+.dashboard-card,
+.leave-table,
+.employee-table {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+.dashboard-card h2,
+.leave-table h2 {
+  color: #1e293b;
+  margin-bottom: 22px;
+}
+
+.dashboard-card p {
+  color: #475569;
+  margin: 15px 0 5px;
+}
+
+.dashboard-card small {
+  color: #94a3b8;
+}
+
+/* Employee Actions */
+.employee-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.employee-actions input {
+  padding: 12px;
+  width: 280px;
+  border: 1px solid #dbe3ef;
+  border-radius: 8px;
+}
+
+.employee-actions button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 650px;
+}
+
+th,
+td {
+  padding: 16px 12px;
+  text-align: left;
+  border-bottom: 1px solid #edf0f5;
+  color: #475569;
+  font-size: 14px;
+}
+
+th {
+  background: #f1f5fb;
+  color: #334155;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .stats-container,
+  .leave-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboard-bottom {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    width: 160px;
+    padding: 15px 10px;
+  }
+
+  .main-content {
+    padding: 15px;
+  }
+
+  .stats-container,
+  .leave-stats {
+    grid-template-columns: 1fr;
+  }
+}
